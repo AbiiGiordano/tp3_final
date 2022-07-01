@@ -59,6 +59,7 @@ const string ANIOS_INVALIDOS = "\nAños inválidos, intente nuevamente\n";
 const string AVISO_FALLECIMIENTO_VALIDO = "El fallecimiento debe ser después del anio de nacimiento: ";
 const string ESCRITOR_ELIMINADO = "\n Escritor eliminado con éxito!\n";
 const string ELIMINACION_ERRONEA = "\n No es posible eliminar un escritor anónimo, intente nuevamente.\n";
+const string ESCRITOR_INVALIDO = "\n No es posible crear un escritor anónimo, intente nuevamente.\n";
 
 // Opciones
 const char SI = 's';

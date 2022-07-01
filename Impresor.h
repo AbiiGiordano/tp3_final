@@ -49,6 +49,7 @@ public:
     //PRE: -
     //POS: Le solicita al usuario que ingrese un isni para ser procesado.
     string pedir_isni();
+    string pedir_isni(int sobrecargar);
 
     //PRE: -
     //POS: Le solicita al usuario que ingrese un nombre para ser procesado.

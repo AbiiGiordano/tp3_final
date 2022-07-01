@@ -63,16 +63,21 @@ Lectura* Opciones::crear_lectura(){
 
 void Opciones::agregar_escritor(){
     Escritor* nuevo_escritor = crear_escritor();
-    cout << ESCRITOR_CREADO << endl;
-    nuevo_escritor->mostrar_escritor();
+    if(nuevo_escritor){
+        cout << ESCRITOR_CREADO << endl;
+        nuevo_escritor->mostrar_escritor();
+    }
+    else
+        cout << ESCRITOR_INVALIDO << endl;
+
 }
 
 Escritor* Opciones::crear_escritor() {
-    Escritor *nuevo_escritor;
+    Escritor *nuevo_escritor = nullptr;
     Escritor *escritor_hallado;
 
     string nuevo_isni;
-    nuevo_isni = impresor.pedir_isni();
+    nuevo_isni = impresor.pedir_isni(0);
     nuevo_isni = "(" + nuevo_isni +  ")";
 
     if(nuevo_isni != "(0)"){
@@ -90,8 +95,7 @@ Escritor* Opciones::crear_escritor() {
             nuevo_escritor = new Escritor(nombre, nacionalidad, nacimiento, fallecimiento);
             tabla->agregar_lista(nuevo_isni, nuevo_escritor);
         }
-    } else
-        nuevo_escritor = nullptr;
+    }
 
     return nuevo_escritor;
 }
